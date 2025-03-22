@@ -1,0 +1,21 @@
+let str = 'hansana' //define string
+console.log(str.split('').reverse().join('')) //reverse the string
+
+
+let arr = [10,9,85,7] //define array
+let first = -Infinity, second = -Infinity; //init variables
+    
+    for (let num of arr) { //loop through each element of the array
+        if (num > first) { //if the current num is greater than 1st assign it to first and the first to second
+            second = first;
+            first = num;
+        } else if (num > second && num < first) { //if the current num is between the first and second , set to the 2nd highest
+            second = num;
+        }
+    }
+console.log(second === -Infinity ? null : second) //return null if the second element is undefined or array too small
+
+
+let str1 = 'madam' //define a text
+let str2 = str1.toLowerCase(); //lowercase to ensure palindrome works fine
+console.log(str2 === str1.split('').reverse().join('')) //check the result
